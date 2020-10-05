@@ -296,7 +296,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/10/05/%E8%AE%A1%E7%BD%91%E4%B8%93%E9%A2%98/" itemprop="url">计网专题</a></h1>
+                <a class="post-title-link" href="/2020/10/05/%E8%AE%A1%E7%BD%91%E4%B8%93%E9%A2%98/" itemprop="url">Computer Network</a></h1>
         
 
         <div class="post-meta">
@@ -316,6 +316,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A1%E7%BD%91/" itemprop="url" rel="index">
+                    <span itemprop="name">计网</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -345,7 +367,7 @@
 
       
         
-          Welcome to my blog, enter password to read.
+          PRIVATE ZONE
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/10/05/%E8%AE%A1%E7%BD%91%E4%B8%93%E9%A2%98/#more" rel="contents">
@@ -635,10 +657,7 @@
 
       
         
-          <blockquote>
-<p><strong>GOAL</strong>：2 per day</p>
-<p>ref 算法基础课</p>
-</blockquote>
+          PRIVATE ZONE
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/10/03/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/#more" rel="contents">
@@ -732,6 +751,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%80%E8%BF%91%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index">
+                    <span itemprop="name">最近学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -760,33 +801,14 @@
 
       
         
-          
-            <h1 id="GNN"><a href="#GNN" class="headerlink" title="GNN"></a>GNN</h1><p>CNN-RNN-序列模型-GNN</p>
-<p>看完 BRNN 之后有点累了，想感受一下 GNN，之前实验室的同学反复提到，这个效果也贼好，今年论文 4 篇都与之有关，了解了解。</p>
-<blockquote>
-<p>需要补充很多先序知识！！</p>
-<p>ref:<a href="https://zhuanlan.zhihu.com/p/53194407" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/53194407</a></p>
-</blockquote>
-<h2 id="Embedding"><a href="#Embedding" class="headerlink" title="Embedding"></a>Embedding</h2><blockquote>
-<p>我发现还是得看看 word2vec 👋</p>
-<p><a href="http://www.ai-start.com/dl2017/html/lesson5-week2.html" target="_blank" rel="noopener">http://www.ai-start.com/dl2017/html/lesson5-week2.html</a></p>
-</blockquote>
-<p>很显然，是 10 月 4 号回来补的</p>
-<h3 id="自然语言处理与词嵌入"><a href="#自然语言处理与词嵌入" class="headerlink" title="自然语言处理与词嵌入"></a>自然语言处理与词嵌入</h3><blockquote>
-<p>ref:Andrew Wu</p>
-</blockquote>
-<h4 id="词汇表征"><a href="#词汇表征" class="headerlink" title="词汇表征"></a>词汇表征</h4><p>学习到了 300 维的特征向量后，嵌入二维空间进行可视化。常用算法<strong>t-SNE</strong></p>
-<p><strong>词嵌入</strong>：利用大量无标签的文本训练集进行学习，甚至迁移学习</p>
-<p><em>Steps</em></p>
-<p>第一步，先从大量的文本集中学习词嵌入。一个非常大的文本集，或者可以下载网上预训练好的词嵌入模型，网上你可以找到不少，词嵌入模型并且都有许可。</p>
-<p>第二步，你可以用这些词嵌入模型把它迁移到你的新的只有少量标注训练集的任务中，比如说用这个300维的词嵌入来表示你的单词。这样做的一个好处就是你可以用更低维度的特征向量代替原来的10000维的<strong>one-hot</strong>向量，现在你可以用一个300维更加紧凑的向量。尽管<strong>one-hot</strong>向量很快计算，而学到的用于词嵌入的300维的向量会更加紧凑。</p>
-<p>第三步，当你在你新的任务上训练模型时，在你的命名实体识别任务上，只有少量的标记数据集上，你可以自己选择要不要继续微调，用新的数据调整词嵌入。实际中，只有这个第二步中有很大的数据集你才会这样做，如果你标记的数据集不是很大，通常我不会在微调词嵌入上费力气。</p>
-<h3 id="词嵌入的特性"><a href="#词嵌入的特性" class="headerlink" title="词嵌入的特性"></a>词嵌入的特性</h3><h2 id="Graph-Embedding"><a href="#Graph-Embedding" class="headerlink" title="Graph Embedding"></a>Graph Embedding</h2><blockquote>
-<p>ref:<a href="https://zhuanlan.zhihu.com/p/64200072" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/64200072</a></p>
-</blockquote>
-<p><strong>Graph Embedding是推荐系统、计算广告领域最近非常流行的做法</strong>，是从word2vec等一路发展而来的Embedding技术的最新延伸，已经有很多大厂<strong>将Graph Embedding应用于实践后取得了非常不错的线上效果</strong></p>
-
-          
+          PRIVATE ZONE
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/10/02/Graph-Embedding/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1915,7 +1937,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>

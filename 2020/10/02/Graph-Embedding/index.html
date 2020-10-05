@@ -314,6 +314,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%80%E8%BF%91%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index">
+                    <span itemprop="name">最近学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -346,31 +368,15 @@
       
 
       
-        <h1 id="GNN"><a href="#GNN" class="headerlink" title="GNN"></a>GNN</h1><p>CNN-RNN-序列模型-GNN</p>
-<p>看完 BRNN 之后有点累了，想感受一下 GNN，之前实验室的同学反复提到，这个效果也贼好，今年论文 4 篇都与之有关，了解了解。</p>
-<blockquote>
-<p>需要补充很多先序知识！！</p>
-<p>ref:<a href="https://zhuanlan.zhihu.com/p/53194407" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/53194407</a></p>
-</blockquote>
-<h2 id="Embedding"><a href="#Embedding" class="headerlink" title="Embedding"></a>Embedding</h2><blockquote>
-<p>我发现还是得看看 word2vec 👋</p>
-<p><a href="http://www.ai-start.com/dl2017/html/lesson5-week2.html" target="_blank" rel="noopener">http://www.ai-start.com/dl2017/html/lesson5-week2.html</a></p>
-</blockquote>
-<p>很显然，是 10 月 4 号回来补的</p>
-<h3 id="自然语言处理与词嵌入"><a href="#自然语言处理与词嵌入" class="headerlink" title="自然语言处理与词嵌入"></a>自然语言处理与词嵌入</h3><blockquote>
-<p>ref:Andrew Wu</p>
-</blockquote>
-<h4 id="词汇表征"><a href="#词汇表征" class="headerlink" title="词汇表征"></a>词汇表征</h4><p>学习到了 300 维的特征向量后，嵌入二维空间进行可视化。常用算法<strong>t-SNE</strong></p>
-<p><strong>词嵌入</strong>：利用大量无标签的文本训练集进行学习，甚至迁移学习</p>
-<p><em>Steps</em></p>
-<p>第一步，先从大量的文本集中学习词嵌入。一个非常大的文本集，或者可以下载网上预训练好的词嵌入模型，网上你可以找到不少，词嵌入模型并且都有许可。</p>
-<p>第二步，你可以用这些词嵌入模型把它迁移到你的新的只有少量标注训练集的任务中，比如说用这个300维的词嵌入来表示你的单词。这样做的一个好处就是你可以用更低维度的特征向量代替原来的10000维的<strong>one-hot</strong>向量，现在你可以用一个300维更加紧凑的向量。尽管<strong>one-hot</strong>向量很快计算，而学到的用于词嵌入的300维的向量会更加紧凑。</p>
-<p>第三步，当你在你新的任务上训练模型时，在你的命名实体识别任务上，只有少量的标记数据集上，你可以自己选择要不要继续微调，用新的数据调整词嵌入。实际中，只有这个第二步中有很大的数据集你才会这样做，如果你标记的数据集不是很大，通常我不会在微调词嵌入上费力气。</p>
-<h3 id="词嵌入的特性"><a href="#词嵌入的特性" class="headerlink" title="词嵌入的特性"></a>词嵌入的特性</h3><h2 id="Graph-Embedding"><a href="#Graph-Embedding" class="headerlink" title="Graph Embedding"></a>Graph Embedding</h2><blockquote>
-<p>ref:<a href="https://zhuanlan.zhihu.com/p/64200072" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/64200072</a></p>
-</blockquote>
-<p><strong>Graph Embedding是推荐系统、计算广告领域最近非常流行的做法</strong>，是从word2vec等一路发展而来的Embedding技术的最新延伸，已经有很多大厂<strong>将Graph Embedding应用于实践后取得了非常不错的线上效果</strong></p>
-
+        <div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <div class="hbe-input-container">
+  <input type="password" id="hbePass" placeholder="" />
+    <label for="hbePass">Welcome to my blog, enter password to read.</label>
+    <div class="bottom-line"></div>
+  </div>
+  <script id="hbeData" type="hbeData" data-hmacdigest="1ccb6c6d1bbfe2aa8518ff9051ab549c789bab99c206668e5634313d6fd2aa6f">143dfd69ecdf3a725857a447cbad13bc148125d23caa1485c7b7ff9812f246a4c7e4db7b85d15a346965e72972dc735955dfe9242c73a71093a948bc1eb7bcae2fea11720c8df7f18d66283e211cba480fa113a8f274b3944cd6d0170be01a3966d3b3b41fa6eff6710e43ac18235978581ad84acd86be2a70743564ae1c436fd23b839a1692e18a6b81817b7bf78e4b9b918e18efcd3633b500f7a97394d1d30e387483e6e0421ff32b015dd731a175e3e6ae50d52b4c80c888a6c603c0d4980887bc8837706bf6214a21281aa0fa02b542a17401bcfbd52fa3eab08a835e57b3d76a645bb0ba930ac7d5181fbf5c435318a1405b030aec270d9d935aa8008602ff65d23fb03d124ed289802fe295de2891f27a51e3c3d15fa9cb701b6b2ef0066bd7d1c5182a5eba38737c18af3026a7160e7812cbae84354518477c3c66f3e6676623170a0fc5d6cd0c40f0ac0040046613f4a7e4a2d3a11bd05846049e22dcd15c3b5b7b4dcc73d80d01cf6677252704e89a98ab7469410110815c808b0ed1296cc7d0ffaceb6391ba3fdbff15d1ba5c489a12855483495873a08372f67b406d424ed4a4f71ded7f1d7e994e7c3c8cf30f267c379d11c5cb40506bf9b54e6535e77d9c87c3573fbd17ef4937fbda1eb7e1fc4bd25effd4ad742fd4cb1b7507f973ce69c491afa1ea0d704e810220fb9cd6af17b56e95abadd4a7acc2746d622ce2042ffedcd9ca4721f0f0eac92dd2ec62b89bd013e956147c07992bb36d053b3433a076d98b8496556d021f031a81135b3d1387bdf47488abcd2af659013bcd8dd21562dc29b1dc6de37f47bac08028792bde8890ccc9497e19211832b00b4d5d2289f33cbd6d1372f6eb5103ae2bf65bf37f5dde9a222915c58e4e64e9ec77007c37f8d2f393787fd7c69d28a5861a9972122ccf13294ef6e61444d71cc760a4ee4058e4e6adb472c6411187079251b37c65c5df0b29586a5f902ef0f8bd3f4940c4e542597c02942ab51d3ae1f14c8fedb0c89687768584b50689e926e110b43775ae2552c3b112eecadec866a22442c90e785d21badcbdc71276d716cb5bfc2a9b7173b5a356ed6b99ff29442853df2ad3834b58ce53eb6ffa0ced4d904d55cbdf73e3ce13d1f1aa73e92c541ff154603c778ff026431f626851680f159dfa145abb8f966b4c89758987c524cf16ff0a37127e85cff560ca3f4638b5956cefce08c5a59b25b522e34b458385b93d0850a3fe7d1ecc040324912630bae11a33d9bc3a48a32ade4d307a071331dd47f6ec3a3bbc23108b2eb71323437e40d9fb74cda49e2e91723f1e2d1a42f648a51c037524cc7793a176e6778059f4ee52ca7ff2fb6699c8945154808569d98ec909c6641facbf529cf8ef3e0b026c80ac4a9e9788c2d55cae2bae0298b16e7294050c17652892c74cb358fb1491ae4e8c25b8194506349e77dacb503bd823d138fc071dcc24f4628d05010c13b6961438bd3ecd8208ac5a7b0e3d7a64dbf1eede2a5759f6e0bc3a3b757ab92f67700187d4dde3b3a087dad2c949006694d170340de19f846e3be25912b3cd38b942af4619620671658c9b93dec9f6debbb637e1feb1332cb2a2f7925160849f59e3c88aeaea1a0df86b043ea3329b36bcda7e31d04272fc2da84bb60c8fce015e622f74ed0b193904673a9f2cecdf624c60143a722ec5e88399d00daaca0ac2f07f365d93842050f617e0d0ea3d017de57e1075f21b771a1ae1661c12fca30fa6dddf9784cb86b88b61cbc58039135b8e9e62e8db4c8b92975f1a4da43e3a09e62c1f7db2706a0fc3fdedf0d3f5bdd700bf930987405c44a9755e08ca630f7a12cf7498ea413821efd8f184ba792516df777e0db319f2b8b6d96f056556089e994f801063ff7978103df6fbe47c1d36811fa860e8377c1e6525d53d0297498664e8c1144fda44cae78f20f8ea78765bd9b93acf030d0fae5b456eced670abe00eca73c58f7c964383e6912373bf3729c0047f07c2bd59ecb323fc43c59f8a297340b8210f67aa2c94739d58c56444245098dec12a1a12922ff2d8f5779a5a4fd8787392bf83a0b0a53b6c05f3aab17ea10e75993d38dc7a013877bf6a2528c37440f28eeebda7f19b093aae87f42eb929e354163a5b90c34833ffb1efd95e5e7925d6274a20a9e4a1b5b4477b6a0dc6f920964a9141c873d5c05b596fd758a09b5c0c5805a25ab2ca58e7b49e4debd62028e3c4fd48b73b6bc6c29cb1a2fe6336393fadf77f5e0894d52a7ca84e0261c77f9d0a0b4aba43aee18decbd69eaa1f66deaa685e7e8067e4029bb0943bd5fc695e960192f5f465e80b93253702af45bf2609cc42521ee9e45ac31bbf604eace678d56b144984256698275e263da5f15ac233aa3774608b5e8a1f2453c649aa10af85c4292885d64abf14882eb9fdb9d7b2b4ab8c16de62809f59d0b4d7778f3298689daf8df81876605b652c45f86888c8c5ea1a60b7c0ccdd52e9b2c6aea4ff29156a34f0ad839f6b576e4f3e29237225646b4a10f78bdd9bd9d094f5508293b4b1aa0ab28caa551fb12182eca903d1c5dfdbee7a54d4209d7c445a989a857dbba4a44fcab2164963e39852ca0b810b172edc1cefba831fb23c7bc63005f76f3aa9e81e06c709efc7dc4e09eb6d13ef9b338ecaf6445df5a3d6f2226f42a3d0e3a4ac2e4af16206df803a6373a2b0246978997cc75f25137ce0e73a20f2d66154ade40de52230c8f6d4ed77878cd27410f84af84eaba7b925bd2965620e3e8544b7128347190581cd06f3c56ac7c08bd0e8263b87f0c8ec364c887eaf5af6e43ece3ce23ce8b0767db5b220f60b8bd61c7b5f7d66142d2b60c448a07f0d954076e2357c55b7341cd2ec27dd681cb15f2f27afc7ab21df2165f8440ba21e2be564bff304f746016865bfc51e0b436f40fa6b1c4eac26656919b8da35f1cc6015723d8666042a48805fc5caf32aa1a51c076b5eead37b4396c382a2c92f45146d443701da041eb9b3c6a4704707a0073d432521683ceb17cedc20a8457418ea8d9b0de10293f35f22b6217eaa118ed07ee81e9df93c5b945e09df083b41796108cb5c9c53e87cdcf5d8c0565c7eadaf887246c7b603f5cce49c4ceb04e43a35d115e788cd306b7c4e1a7acf201b330a8e86913e47698bf2fccc088683c60d6b7b7323022179d89ceb4119c17639ca30ec5493559e80bbd0812c88f783e5c87cc9bf8e8e30f6d5a6d4f9960c27ab679df8d0dfe8ed25e64a06471537458f65e211a58be859796cb9acdb84f1a98c28472d3b6664f02a5731ac1b5e1775b14a9642fa18101849bf65ebf4a78871efdfa45819ff1746040a3ea55d701a3aaaa362293a0afdf1f3b65c71a6a0bd96f15bd300e271f9795c37540fb75b312aff64f4f58eaac294630cf6e2fe8c386679966056087b28442c2157644a982a3fa3b722e882de8250aa5465452dd9474e1154486fb6e81c6ff11b58bf74928381c915854ee3bf19db41f1f5de016e0c69e9382f5d1304e54d7847460688f28a5bd6c991faa589ed7776c6898f97ea9dbc5d682348051eefa1b939f16b56689d4ceb8d1998099a50af038ca8d321b1a1deef885b7330eb01c6f7333efb57c966dd638eef809f519ee858747aaa08e723110298393b3aa5045f856672d28c735a69b9b742f25622b5986545916674039949dc3645cc5c16a1f00c47b89f2c8eb917aa41b73d29382cf2b6ef597b26d81d99606cc023452cf5ab90fc33914f4505e3a26c315fb2f462e16828e9f137a840ad21b641c9caf7fce34f4d58902217b5a4db65ac16d1494748fe1e12a43810f2ed89793bc10d8ff27d6137fed3193a483c2c1ee24755d64326e831cbfc13a7bd0f829590b10443df4240b8ff86942f5678ae0c0e477650a5d3955a9529e717675d871b6299e4c57c7949a6d21672d0a2a9f84b0b89708460cf58828c0d33fb4d2937edf64a652477c31197b62c74ee50d855dfaf9844261a0401c5c935976961809a0926ce72d77a04442b3e3bace1683828a0a60940884333596bed7c961f2f8ff0b78a9cf791bbe71906edd9bcf774a3a82e43625b9057a36284ccf78de50ee9321a3630604c35638721afcd35c466406728db254861e741e51e68279058564aceeb16cca30206589cfaf0d22c69b4343ea1b3565ea499fdc2cd4cd1832d1205cedf9b2fb28157415a99f6d2aaee18e03696edd80bf666496bfc0fe5bc2e0351e4edd345878e29a34872aba3c722768a663d5f5e3d7fd74058c321eef864586b6a0d9a89276a632d2f94f9311892e73d9693228a80e3cc7fbe5a8be323a86618fab471931cad86ccc6d78e9603e058f0086e4626608ddbe1ced0dfbddd4e8d56f1f8684a129a02cc7342a164ff1fd713a1ff01ec8c5eb1b309886a6a02056a974551fbee15374dcc9f8dbdd354d209e76c6a5a09def7af3b2b030a8f75644bfdf2febd74628340301f1a11de16ac320d796503b2f670ec6c28796991ffe47dd595bd58fbfac7ef08201277ab44a8f8cfb68ec884216827eb56674b3846e2c0994e2e47d79</script>
+</div>
+<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
       
     </div>
     
@@ -464,17 +470,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -504,7 +501,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -538,22 +535,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#GNN"><span class="nav-number">1.</span> <span class="nav-text">GNN</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Embedding"><span class="nav-number">1.1.</span> <span class="nav-text">Embedding</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#自然语言处理与词嵌入"><span class="nav-number">1.1.1.</span> <span class="nav-text">自然语言处理与词嵌入</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#词汇表征"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">词汇表征</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#词嵌入的特性"><span class="nav-number">1.1.2.</span> <span class="nav-text">词嵌入的特性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Graph-Embedding"><span class="nav-number">1.2.</span> <span class="nav-text">Graph Embedding</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
