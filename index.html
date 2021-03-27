@@ -347,7 +347,7 @@
             <blockquote>
 <p> 参考网课 数学建模清风-论文写作方法教程</p>
 <p>美赛通用框架</p>
-<img src="/2021/01/21/%E7%BE%8E%E8%B5%9B%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%96%B9%E6%B3%95/kuangjia.jpg" class title="name1} # 写作方法 ## summary摘要（和国赛一致） ### 开头 {%asset_img kaitou.jpg name1">
+<img src="/2021/01/21/%E7%BE%8E%E8%B5%9B%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%96%B9%E6%B3%95/kuangjia.jpg" class title="name1} # 写作方法 &lt;!--more--&gt; ## summary摘要（和国赛一致） ### 开头 {%asset_img kaitou.jpg name1">
 </blockquote>
 <h3 id="中间"><a href="#中间" class="headerlink" title="中间"></a>中间</h3><p>三要素：</p>
 <ol>
@@ -809,7 +809,10 @@
 
       
         
-          Private now, open soon
+          <blockquote>
+<p><strong>GOAL</strong>：2 per day</p>
+<p>ref 算法基础课</p>
+</blockquote>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/10/03/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/#more" rel="contents">
@@ -953,14 +956,48 @@
 
       
         
-          Private now, open soon
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/10/02/Graph-Embedding/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
+            <h1 id="GNN"><a href="#GNN" class="headerlink" title="GNN"></a>GNN</h1><p>CNN-RNN-序列模型-GNN</p>
+<p>看完 BRNN 之后有点累了，想感受一下 GNN，之前实验室的同学反复提到，这个效果也贼好，今年论文 4 篇都与之有关，了解了解。</p>
+<blockquote>
+<p>需要补充很多先序知识！！</p>
+<p>ref:<a href="https://zhuanlan.zhihu.com/p/53194407" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/53194407</a></p>
+</blockquote>
+<h2 id="Embedding"><a href="#Embedding" class="headerlink" title="Embedding"></a>Embedding</h2><blockquote>
+<p>我发现还是得看看 word2vec 👋</p>
+<p><a href="http://www.ai-start.com/dl2017/html/lesson5-week2.html" target="_blank" rel="noopener">http://www.ai-start.com/dl2017/html/lesson5-week2.html</a></p>
+</blockquote>
+<p>很显然，是 10 月 4 号回来补的</p>
+<h3 id="自然语言处理与词嵌入"><a href="#自然语言处理与词嵌入" class="headerlink" title="自然语言处理与词嵌入"></a>自然语言处理与词嵌入</h3><blockquote>
+<p>ref:Andrew Wu</p>
+</blockquote>
+<h4 id="词汇表征"><a href="#词汇表征" class="headerlink" title="词汇表征"></a>词汇表征</h4><p>学习到了 300 维的特征向量后，嵌入二维空间进行可视化。常用算法<strong>t-SNE</strong></p>
+<p><strong>词嵌入</strong>：利用大量无标签的文本训练集进行学习，甚至迁移学习</p>
+<p><strong><em>Steps</em></strong></p>
+<p>第一步，先从大量的文本集中学习词嵌入。一个非常大的文本集，或者可以下载网上预训练好的词嵌入模型，网上你可以找到不少，词嵌入模型并且都有许可。</p>
+<p>第二步，你可以用这些词嵌入模型把它迁移到你的新的只有少量标注训练集的任务中，比如说用这个300维的词嵌入来表示你的单词。这样做的一个好处就是你可以用更低维度的特征向量代替原来的10000维的<strong>one-hot</strong>向量，现在你可以用一个300维更加紧凑的向量。尽管<strong>one-hot</strong>向量很快计算，而学到的用于词嵌入的300维的向量会更加紧凑。</p>
+<p>第三步，当你在你新的任务上训练模型时，在你的命名实体识别任务上，只有少量的标记数据集上，你可以自己选择要不要继续微调，用新的数据调整词嵌入。实际中，只有这个第二步中有很大的数据集你才会这样做，如果你标记的数据集不是很大，通常我不会在微调词嵌入上费力气。</p>
+<h4 id="词嵌入的特性"><a href="#词嵌入的特性" class="headerlink" title="词嵌入的特性"></a>词嵌入的特性</h4><p>一个重要的概念：<strong>余弦相似度</strong></p>
+<h4 id="嵌入矩阵"><a href="#嵌入矩阵" class="headerlink" title="嵌入矩阵"></a>嵌入矩阵</h4><p>$E$ 嵌入矩阵</p>
+<p>$e$ 嵌入向量</p>
+<p>当你应用算法来学习词嵌入时，实际上是学习一个嵌入矩阵</p>
+<h4 id="学习词嵌入"><a href="#学习词嵌入" class="headerlink" title="学习词嵌入"></a>学习词嵌入</h4><p>嵌入向量由<strong>one-hot</strong>向量与参数矩阵 $E$ 相乘得到</p>
+<p>模型提出了一个机器学习问题，即输入一些上下文，例如目标词的前4个词然后预测出目标词，提出这些问题是怎样帮助学习词嵌入的。</p>
+<blockquote>
+<p>感觉讲的算法太含糊了没有落到实地</p>
+</blockquote>
+<h4 id="Word2Vec"><a href="#Word2Vec" class="headerlink" title="Word2Vec"></a>Word2Vec</h4><p>假设在训练集中给定了一个这样的句子：“<strong>I want a glass of orange juice to go along with my cereal.</strong>”，在<strong>Skip-Gram</strong>模型中，我们要做的是抽取上下文和目标词配对，来构造一个监督学习问题。上下文不一定总是目标单词之前离得最近的四个单词，或最近的个单词。我们要的做的是随机选一个词作为上下文词，比如选<strong>orange</strong>这个词，然后我们要做的是随机在一定词距内选另一个词，比如在上下文词前后5个词内或者前后10个词内，我们就在这个范围内选择目标词。可能你正好选到了<strong>juice</strong>作为目标词，正好是下一个词（表示<strong>orange</strong>的下一个词），也有可能你选到了前面第二个词，所以另一种配对目标词可以是<strong>glass</strong>，还可能正好选到了单词<strong>my</strong>作为目标词。</p>
+<p>于是我们将构造一个监督学习问题，它给定上下文词，要求你预测在这个词正负10个词距或者正负5个词距内随机选择的某个目标词。显然，这不是个非常简单的学习问题，因为在单词<strong>orange</strong>的正负10个词距之间，可能会有很多不同的单词。但是构造这个监督学习问题的目标并不是想要解决这个监督学习问题本身，而是想要使用这个学习问题来学到一个好的词嵌入模型。</p>
+<h2 id="Graph-Embedding"><a href="#Graph-Embedding" class="headerlink" title="Graph Embedding"></a>Graph Embedding</h2><blockquote>
+<p>ref:<a href="https://zhuanlan.zhihu.com/p/64200072" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/64200072</a></p>
+</blockquote>
+<p><strong>Graph Embedding是推荐系统、计算广告领域最近非常流行的做法</strong>，是从word2vec等一路发展而来的Embedding技术的最新延伸，已经有很多大厂<strong>将Graph Embedding应用于实践后取得了非常不错的线上效果</strong></p>
+<blockquote>
+<p>这个系列可能要暂停了，有缘再见，研究模式挖掘去了</p>
+<p>😭😭😭</p>
+</blockquote>
+
+          
         
       
     </div>
